@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ebfcfa; -fx-border-color: black; -fx-border-width: 5px;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195pa.controllers.ReportsController">
+    <children>
+        <Button fx:id="btnBack" layoutX="736.0" layoutY="538.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #dee0e0;" text="Back ">
+            <font>
+                <Font name="Baskerville Old Face" size="14.0" />
+            </font>
+        </Button>
+      <TabPane layoutX="53.0" layoutY="112.0" prefHeight="396.0" prefWidth="795.0" style="-fx-background-color: #d6d6d6;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabConsultant" text="Consultant Schedule">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                          <TableView fx:id="tvConsultant" layoutX="6.0" prefHeight="354.0" prefWidth="774.0">
+                              <columns>
+                                  <TableColumn fx:id="colContactID" prefWidth="90.0" text="Contact" />
+                                  <TableColumn fx:id="colAppID" minWidth="0.0" prefWidth="100.0" text="Appointment ID" />
+                              <TableColumn fx:id="colTitle" prefWidth="85.0" text="Title" />
+                              <TableColumn fx:id="colType" prefWidth="85.0" text="Type" />
+                              <TableColumn fx:id="colDescription" prefWidth="90.0" text="Description" />
+                                  <TableColumn fx:id="colAppStart" prefWidth="120.00006103515625" text="Start Date and Time" />
+                                  <TableColumn fx:id="colAppEnd" minWidth="0.0" prefWidth="119.20013427734375" text="End Date and Time" />
+                                  <TableColumn fx:id="colCustomerID" minWidth="7.99993896484375" prefWidth="80.80002441406248" text="Customer ID" />
+                              </columns>
+                          </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabAppMonth" text="Appointments by Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvAppTypeTotal" layoutX="14.0" layoutY="36.0" prefHeight="320.0" prefWidth="360.0">
+                          <columns>
+                            <TableColumn fx:id="colAppType" prefWidth="180.0" text="App. Type for Current Month" />
+                            <TableColumn fx:id="colAppTypeTotal" prefWidth="180.0" text="Total" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="tvAppMonthTotal" layoutX="421.0" layoutY="37.0" prefHeight="138.0" prefWidth="358.0">
+                           <columns>
+                              <TableColumn fx:id="colAppByMonth" prefWidth="180.0" text="Months w/ Appointments" />
+                              <TableColumn fx:id="colAppByMonthTotal" prefWidth="180.0" text="Total" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="tvNoAppMonthTotal" layoutX="421.0" layoutY="202.0" prefHeight="138.0" prefWidth="358.0">
+                           <columns>
+                              <TableColumn fx:id="colNoAppByMonth" prefWidth="180.0" text="Months w/ no Appointments" />
+                              <TableColumn fx:id="colNoAppByMonthTotal" prefWidth="180.0" text="Total" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabCustAppTotal" text="Appointments Total per Customer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvCustAppTotal" layoutX="98.0" prefHeight="354.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="colCustomerIDAppTotal" prefWidth="200.0" text="Customer ID" />
+                              <TableColumn fx:id="colCustomerNameAppTotal" prefWidth="200.0" text="Customer Name" />
+                              <TableColumn fx:id="colAppTotal" minWidth="7.99993896484375" prefWidth="200.0" text="Total Number of Appointments" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="412.0" layoutY="14.0" text="Reports">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

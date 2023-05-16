@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="600.0" style="-fx-background-color: #ebfcfa; -fx-border-color: black; -fx-border-width: 5px;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195pa.controllers.AddAppointmentController">
+    <children>
+        <Button fx:id="btnCancel" layoutX="319.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleCancelAction" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #dee0e0;" text="Cancel">
+            <font>
+                <Font name="Baskerville Old Face" size="14.0" />
+            </font>
+        </Button>
+      <Button fx:id="btnSave" layoutX="131.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleSaveAction" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #dee0e0;" text="Save">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfAppID" disable="true" editable="false" layoutX="317.0" layoutY="78.0" />
+      <TextField fx:id="tfAppTitle" layoutX="317.0" layoutY="121.0" />
+      <TextField fx:id="tfAppDescription" layoutX="317.0" layoutY="169.0" />
+      <DatePicker fx:id="dpAppDate" layoutX="316.0" layoutY="298.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label fx:id="lblTitleAddAppointment" layoutX="212.0" layoutY="14.0" text="Add Appointment">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAppID" layoutX="77.0" layoutY="81.0" text="Appointment ID">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAppTitle" layoutX="75.0" layoutY="124.0" text="Appointment Title">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAppDescription" layoutX="77.0" layoutY="169.0" text="Appointment Description">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAppLocation" layoutX="76.0" layoutY="216.0" text="Appointment Location">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAppType" layoutX="75.0" layoutY="256.0" text="Appointment Type">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="77.0" layoutY="302.0" text="Date">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStartTime" layoutX="75.0" layoutY="342.0" text="Start Time">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEndTime" layoutX="75.0" layoutY="384.0" text="End Time">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustID" layoutX="77.0" layoutY="424.0" text="Customer ID">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserID" layoutX="81.0" layoutY="465.0" text="User ID">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblContactID" layoutX="81.0" layoutY="504.0" text="Contact ">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbContactID" layoutX="316.0" layoutY="500.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbCustomerID" layoutX="316.0" layoutY="420.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbUserID" layoutX="316.0" layoutY="461.0" prefWidth="150.0" />
+      <TextField fx:id="tfAppType" layoutX="317.0" layoutY="252.0" />
+      <TextField fx:id="tfAppLocation" layoutX="317.0" layoutY="212.0" />
+      <TextField fx:id="tfStartTime" layoutX="317.0" layoutY="338.0" text="FORMAT - 8:00AM" />
+      <TextField fx:id="tfEndTime" layoutX="317.0" layoutY="380.0" text="FORMAT - 9:00AM" />
+      <Button fx:id="btnESTHours" layoutX="479.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleDisplayESTHours" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: #dee0e0;" text="!" />
+      <Button fx:id="btnESTHours1" layoutX="479.0" layoutY="379.0" mnemonicParsing="false" onAction="#handleDisplayESTHours" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: #dee0e0;" text="!" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+module:com.example.c195pa
+com.example.c195pa.controllers
+com.example.c195pa.main
+com.example.c195pa.model
+com.example.c195pa.utils

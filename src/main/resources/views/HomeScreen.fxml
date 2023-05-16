@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: #ebfcfa; -fx-border-color: black; -fx-border-width: 5px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195pa.controllers.HomeController">
+   <children>
+      <Button fx:id="btnExit" layoutX="322.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleExitAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #dee0e0;" text="Exit">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCustomer" layoutX="117.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleCustomerAction" prefHeight="28.0" prefWidth="216.0" style="-fx-background-color: #dee0e0;" text="Customer">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAppointment" layoutX="117.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleAppointmentAction" prefHeight="28.0" prefWidth="216.0" style="-fx-background-color: #dee0e0;" text="Appointment">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReports" layoutX="117.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleReportsAction" prefHeight="30.0" prefWidth="216.0" style="-fx-background-color: #dee0e0;" text="Reports">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblTitleHome" layoutX="193.0" layoutY="14.0" text="Home">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ebfcfa; -fx-border-color: black; -fx-border-width: 5px;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195pa.controllers.AppointmentsController">
+    <children>
+        <Button fx:id="btnBack" layoutX="732.0" layoutY="554.0" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #dee0e0;" text="Back ">
+            <font>
+                <Font name="Baskerville Old Face" size="14.0" />
+            </font>
+        </Button>
+      <RadioButton fx:id="radioAll" layoutX="233.0" layoutY="111.0" mnemonicParsing="false" onAction="#selectedRBAll" selected="true" text="All Appointments">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tgAppointmentSort" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioCurWeek" layoutX="396.0" layoutY="111.0" mnemonicParsing="false" onAction="#selectedRBWeek" text="Current Week" toggleGroup="$tgAppointmentSort">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radioCurMonth" layoutX="553.0" layoutY="111.0" mnemonicParsing="false" onAction="#selectedRBMonth" text="Current Month" toggleGroup="$tgAppointmentSort">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </RadioButton>
+      <TableView fx:id="tvAppointments" layoutX="52.0" layoutY="185.0" prefHeight="283.0" prefWidth="816.0">
+        <columns>
+            <TableColumn fx:id="colAppID" prefWidth="100.0" text="Appointment_ID" />
+            <TableColumn fx:id="colTitle" minWidth="7.99993896484375" text="Title" />
+            <TableColumn fx:id="colDescription" minWidth="0.0" text="Description" />
+          <TableColumn fx:id="colLocation" text="Location" />
+            <TableColumn fx:id="colContactID" text="Contact" />
+          <TableColumn fx:id="colType" minWidth="0.0" text="Type" />
+            <TableColumn fx:id="colStart" text="Start Date and Time" />
+            <TableColumn fx:id="colEnd" text="End Date and Time" />
+            <TableColumn fx:id="colCustomerID" text="Customer_ID" />
+            <TableColumn fx:id="colUserID" text="User_ID" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="202.0" layoutY="488.0" prefHeight="40.0" prefWidth="516.0">
+        <buttons>
+          <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: #dee0e0;" text="Add Appointment">
+               <font>
+                  <Font name="Baskerville Old Face" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleDeleteAction" style="-fx-background-color: #dee0e0;" text="Delete Appointment">
+               <font>
+                  <Font name="Baskerville Old Face" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleUpdateAction" style="-fx-background-color: #dee0e0;" text="Update Appointment">
+               <font>
+                  <Font name="Baskerville Old Face" size="14.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="lblTitleAppointments" layoutX="392.0" layoutY="14.0" text="Appointments">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSortBy" layoutX="85.0" layoutY="111.0" text="Sort By:">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
